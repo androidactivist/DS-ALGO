@@ -47,4 +47,26 @@ public class BubbleSort {
         bubbleSort(a,n-1);
 
     }
+    
+     /**
+     *
+     * Bubble sort iterative
+     * @param a
+     */
+    private static void bubbleSort(int[] a) {
+        int n = a.length;
+
+        while(n != 1) {
+            for(int i=0; i<n-1; i++) {
+                if(a[i] > a[i+1]) {
+                    //swap the element
+                    int temp = a[i];
+                    a[i] = a[i+1];
+                    a[i+1] = temp;
+                }
+            }
+            n--;
+        }
+
+    }
 }
